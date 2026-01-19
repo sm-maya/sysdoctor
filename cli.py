@@ -1,5 +1,10 @@
 import click
+import sys
 from report import run_scan
+
+if sys.platform.startswith("win"):
+    import os
+    os.system("")
 
 @click.group()
 def cli():
